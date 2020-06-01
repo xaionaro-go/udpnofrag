@@ -7,7 +7,7 @@ import (
 	"syscall"
 )
 
-func UDPSetNoFragment(conn *net.UDPConn) (err error) {
+func udpSetNoFragment(conn *net.UDPConn) (err error) {
 	var syscallConn syscall.RawConn
 	syscallConn, err = conn.SyscallConn()
 	if err != nil {
